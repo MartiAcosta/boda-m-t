@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'amsterdam-one';
+  src: url('../assets/font/amsterdam-one.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'montigny';
+  src: url('../assets/font/FontsFree-Net-Montigny-Regular.ttf') format('truetype');
+}
+
 .App {
   text-align: center;
 }
@@ -13,15 +23,482 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+
+body {
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  background-image: url('./img/o657.jpg');
+  /*background-color: #ffff;*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Esta línea hace que la imagen de fondo permanezca fija */
   min-height: 100vh;
+  overflow: auto;
+}
+
+.rectanguloPadre {
+  width: 1000px;
+  height: 4100px;
+  margin-top: 50px;
+  border-radius: 69px;
+  background:#ffffffe0;
+}
+
+.parentContainer {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;     /* Centrar verticalmente */
+  height: 100vh;           /* Ocupa toda la altura de la pantalla */
+}
+
+.circleTitle{
+  width: 80%; /* Ajuste para móviles */
+  max-width: 583px;
+  height: auto;
+  margin: 15px;
+  background-color: #ffff; 
+  border-radius: 50%; /* Hacerlo más adaptable */
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+}
+
+.circleTitle img {
+  border-radius: 200px;
+}
+
+.bar {
+  width: 583px;
+  height: 148px;
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  border-radius: 500px;
+  background: rgba(255, 255, 255, 0.86);
+  position: absolute; /* Si deseas que bar esté posicionado absolutamente dentro de circleTitle */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta para una centrado perfecto */
+}
+
+.ampersand {
+  color: #7c60384f;
+  font-family: 'Kolker Brush';
+  font-size: 138px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 72%;
+}
+
+.myt {
+  position: absolute;
+  color: #7C6038;
+  font-family: 'montigny';
+  font-size: 89px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 72%;
+}
+
+.myt span {
+  display: block;
+}
+
+.date {
+  position: absolute;
+  bottom: -3px;
+  color: #7C6038;
+  font-family: 'Open Sans';
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 72%;
+}
+
+.primerimg{
+  width: 634.863px;
+  height: 441.732px;
+  transform: rotate(-0.059deg);
+  background-image: url('../src/img/manos.jpg');
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-position: center;   
+  margin: 20px 10px 20px 10px;
+}
+
+
+.wedding {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  margin-top: 51px; 
+}
+
+.wedding p{
+  color: #9B6147;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.17px;
+}
+
+.date {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;  /* Cambia "center" a "flex-start" para alinear en la parte superior */
+}
+
+.date p{
+  color: #9B6147;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.17px;
+  margin-top: 50px;
+}
+
+.title {
+  position: absolute;
+  width: 189px;
+  height: 120px;
+}
+
+.title p{
+  font-family: 'amsterdam-one';
+  color: #7C6038;
+  font-size: 89px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 72%;
+}
+
+.container {
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+}
+
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 1000px;
+  background-color:rgba(182, 112, 52, 0.60);
+  padding: 50px;
+  margin: 20px 0 20px; /* Espaciado entre las tarjetas */
+}
+
+
+.text p{ 
+  margin: 1px;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Open Sans';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 185.5%;
+  letter-spacing: 1.17px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+
+.casarnos {
+  color: #ffffff;
+  font-family: 'Open Sans';
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; 
+  flex-shrink: 0;
+  background-color: #ffffff; /* Color de fondo de la tarjeta */
+  position: relative; /* Para que el pseudo-elemento se posicione en relación con .card */
+  padding: 20px; /* Espaciado interno para que el contenido no toque el borde interno */
+  box-sizing: border-box; 
+  margin: 20px 0px 20px 0px;
+}
+
+.white-line {
+  width: 70%;
+  height: 2px;
+  background-color: white;
+  margin: 30px 0 30px;
+}
+
+.squares-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 146px;
+  height: 158px;  /* Igual que el ancho para hacerlo un cuadrado */
+  background-color: #8A9595; /* Color de fondo del cuadrado, puedes cambiarlo */
+  margin: 7px;   /* Espacio entre cuadrados */
+  color: #FFF;
+  font-family: 'Open Sans';
+  font-size: 65px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2.17px;
+  display: flex;
+  flex-direction: column; /* Hace que los hijos de .square se apilen verticalmente */
+  align-items: center;    /* Centra los hijos horizontalmente */
+  justify-content: space-between; /* Distribuye el espacio entre las dos "secciones" */
+}
+
+.square > div:first-child {
+  display: flex; 
+  flex: 1; 
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 15px;
+}
+
+.square > div:nth-child(2) {
+  color: #FFF;
+  font-family: 'Open Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  display: flex; 
+  flex: 1; 
+  align-items: flex-start; 
+  justify-content: center; 
+  
+}
+
+.cards1{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+}
+
+.tarjeta1 {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  width: 417.145px;
+  height: 592.229px;
+  flex-shrink: 0;
+  background: rgba(182, 112, 52, 0.61);
+  margin-right: 10px; 
+}
+
+.tarjeta2 {
+  width: 340.177px;
+  height: 516.206px;
+  flex-shrink: 0;
+  background: rgba(182, 112, 52, 0.93);
+}
+
+.img2{
+  background-image: url('../src/img/frentes.jpg');
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-position: center;   
+  margin: 20px 10px 20px 10px;
+  margin-left: 10px;
+  width: 417.145px;
+  height: 592.229px;
+  transform: rotate(-0.06deg);
+  flex-shrink: 0;
+}
+
+.cards3{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+}
+
+.tarjeta3 {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  width: 417.145px;
+  height: 592.229px;
+  flex-shrink: 0;
+  background: rgba(138, 149, 149, 0.75);
+  margin-right: 10px; 
+}
+
+.tarjeta4 {
+  width: 340.177px;
+  height: 516.206px;
+  flex-shrink: 0;
+  background: rgba(138, 149, 149, 0.95);
+}
+
+.img3{
+  background-image: url('../src/img/abrazo.jpg');
+  background-size: cover;  
+  background-repeat: no-repeat; 
+  background-position: center;   
+  margin: 10px 20px 10px 0px;
+  width: 417.145px;
+  height: 592.229px;
+  transform: rotate(-0.06deg);
+  flex-shrink: 0;
+}
+
+.iconContainer {
+  position: relative;
+  width: 289.933px;  /* Ancho del círculo */
+  height: 286px;     /* Alto del círculo */
+}
+
+.circleDress {
+  width: 289.933px;
+  height: 286px;
+  border-radius: 289.933px;
+  position: relative;
+  right: 18%;
+  background: linear-gradient(180deg, #E56868 0%, rgba(217, 217, 217, 0.00) 100%);
+}
+
+.iconDress {
+  background-image: url('../src/img/dress.png');
+  background-repeat: no-repeat;
+  background-size: 300px 250px;
+  background-position: center;
+  width: 320px;
+  height: 304px;
+  position: absolute;
+  top: 65%;
+  left: 43%;
+  transform: translate(-50%, -50%); /* Centrar el ícono en relación al contenedor */
+}
+
+.dress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center; 
+}
+
+.dress p {
+  color: #FFF;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 80%; 
+  margin: 10px 0; 
+}
+
+.cardDress {
+  width: 1000px;
+  height: 420px;
+  background-color: rgba(182, 112, 52, 0.60);
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+}
+
+.container2 {
+  display: flex;            /* Habilita Flexbox */
+  align-items: center;      /* Centra los hijos verticalmente */
+}
+
+
+.circleContainer {
+  width: 583px;
+  overflow: hidden;
+}
+
+.circleConfir {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+  gap: 10px;   
+  width: 100%;
+  height: 600px;
+  background-color: rgba(182, 112, 52, 0.78);
+  border-radius: 50%;
+  position: relative;
+  transform: translateY(-50%); /* Mueve el círculo hacia arriba para mostrar solo la mitad superior */
+}
+
+.circleConfir p {
+  text-align: center;
+  font-size: 22px;
+  width: 366px;
+  color: #FFF;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  margin: 5px 0;
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  margin: 260px 0px -10px 0px;
+}
+
+.buttonConfir {
+  width: 230px;
+  height: 50px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;   
+  padding: 10px 20px;    
+  border: none;          
+  cursor: pointer;       
+  background-color: #FFF;
+  color: #B67034;
+  border-radius: 18px;   
+  font-size: 26px;
+  font-family: Open Sans;
+  font-weight: 400;
+  line-height: 185.5%; 
+  outline: none;; 
+}
+
+
+
+
+@media (min-width: 768px) {
+  .circleTitle {
+    width: 30%; 
+  }
+}
+@media (min-width: 1024px) {
+  .circleTitle {
+    width: 583px;
+    height: 588px;
+    margin: 30px;
+  }
 }
 
 .App-link {
@@ -35,4 +512,75 @@
   to {
     transform: rotate(360deg);
   }
+}
+@media (max-width: 768px) {
+
+  .rectanguloPadre {
+    width: 90%;  /* Ajusta el ancho para que sea más adaptativo */
+    margin: 20px auto;  /* Centra el contenedor y añade margen arriba y abajo */
+  }
+
+  .container {
+    flex-direction: column;  /* Los hijos de .container se apilan verticalmente */
+  }
+
+  .primerimg, .card {
+    margin: 20px 0;  /* Añade margen arriba y abajo */
+  }
+
+  .cards1, .cards3 {
+    flex-direction: column;  /* Las tarjetas se apilan verticalmente */
+  }
+
+  .tarjeta1, .tarjeta3 {
+    width: 90%;
+    margin: 20px 0;  /* Añade margen arriba y abajo */
+  }
+  
+  .tarjeta2, .tarjeta4 {
+    width: 80%;
+  }
+
+
+  /* Aquí puedes agregar más estilos específicos para pantallas pequeñas */
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;  /* Los hijos de .container se apilan verticalmente */
+  }
+
+  .card {
+    width: 90%;  /* Ajusta el ancho para que sea más adaptativo */
+    margin: 20px auto;  /* Centra la tarjeta y añade margen arriba y abajo */
+  }
+
+  .text p {
+    font-size: 25px;  /* Reduce el tamaño de fuente */
+  }
+
+  .casarnos {
+    font-size: 40px;  /* Reduce el tamaño de fuente */
+  }
+
+  .square {
+    width: 120px;  /* Reduce el ancho del cuadrado */
+    height: 132px; /* Reduce el alto del cuadrado */
+  }
+
+  .square > div:first-child {
+    font-size: 50px;  /* Reduce el tamaño de fuente */
+  }
+
+  .square > div:nth-child(2) {
+    font-size: 16px;  /* Reduce el tamaño de fuente */
+  }
+
+  .squares-container {
+    flex-wrap: wrap;  /* Permite que los cuadrados se envuelvan en múltiples líneas si no hay suficiente espacio */
+    justify-content: space-around;  /* Distribuye el espacio alrededor de los cuadrados */
+  }
+
+  /* Aquí puedes agregar más estilos específicos para pantallas pequeñas */
 }
