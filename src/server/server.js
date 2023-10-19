@@ -26,8 +26,8 @@ app.get('/invitados', (req, res) => {
 });
 
 app.post('/invitados', (req, res) => {
-    const { nombre, apellido, cod, tel } = req.body;
-    const query = `INSERT INTO invitados (nombre, apellido, cod, tel) VALUES ('${nombre}', '${apellido}', '${cod}', '${tel}')`;
+    const { nombre, apellido, cod, tel, menu } = req.body;
+    const query = `INSERT INTO invitados (nombre, apellido, cod, tel, menu) VALUES ('${nombre}', '${apellido}', '${cod}', '${tel}', '${menu}')`;
     pool.query(query, (err, result) => {
         if (err) throw err;
         res.json({ message: 'Invitado añadido', id: result.insertId });
@@ -36,8 +36,8 @@ app.post('/invitados', (req, res) => {
 
 app.put('/invitados/:id', (req, res) => {
     const id = req.params.id;
-    const { nombre, apellido, cod, tel } = req.body;
-    const query = `UPDATE invitados SET nombre='${nombre}', apellido='${apellido}', cod='${cod}', tel='${tel}' WHERE id='${id}'`;
+    const { nombre, apellido, cod, tel, menu } = req.body;
+    const query = `UPDATE invitados SET nombre='${nombre}', apellido='${apellido}', cod='${cod}', tel='${tel}', menu='${menu}' WHERE id='${id}'`;
     pool.query(query, (err, result) => {
         if (err) throw err;
         res.json({ message: 'Invitado actualizado' });

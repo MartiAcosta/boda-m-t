@@ -10,6 +10,7 @@ function ConfirmarInvitados({ onClose }) {
         apellido: '',
         cod: '',
         tel: '',
+        menu: '',
     })
 
 
@@ -82,7 +83,7 @@ function ConfirmarInvitados({ onClose }) {
                                     type="text"
                                     id="telefono"
                                     placeholder='Telefono'
-                                    value={invitadosData.alimentación}
+                                    value={invitadosData.tel}
                                     onChange={e => setInvitadosData({ ...invitadosData, tel: e.target.value })}
                                 />
                             </div>
@@ -93,11 +94,16 @@ function ConfirmarInvitados({ onClose }) {
                                 <p>preferencia dietética, por favor seleccione una opción:</p>
                                 <select
                                     type="text"
-                                    id="telefono"
-                                    placeholder='Telefono'
-                                    value={invitadosData.alimentación}
-                                    onChange={e => setInvitadosData({ ...invitadosData, tel: e.target.value })}
-                                />
+                                    id="menu"
+                                    value={invitadosData.menu}
+                                    onChange={e => setInvitadosData({ ...invitadosData, menu: e.target.value })}
+                                    >
+                                    <option value="">Selecciona menú</option>
+                                    <option value="celiaco">Celíaco</option>
+                                    <option value="vegano">Vegano</option>
+                                    <option value="vegetariano">Vegetariano</option>
+                                    <option value="sinRestricciones">Sin restricciones</option>
+                                </select>
                             </div>
                         </form>
                         <button className='bottomConfir' type="button" onClick={handleConfirInvitados}>Confirmar</button>

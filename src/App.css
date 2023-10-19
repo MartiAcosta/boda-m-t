@@ -535,6 +535,21 @@ body {
   color: white;
 }
 
+.bank-details select {
+  width: 200px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.87);
+  border: none;
+  color: rgba(182, 112, 52, 0.93);
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 72%;
+}
+
+
 .confirm-details {
   text-align: center;
   margin-bottom: 20px;
