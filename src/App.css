@@ -522,6 +522,23 @@ body {
   margin-bottom: -11px;
 }
 
+.confirmation-message{
+  background-color: rgba(182, 112, 52, 0.7);
+  padding: 10px 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  height: 348px;
+}
+
+.confirmation-message p{
+  margin: 62px 0;
+  color: white;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+}
+
 .bank-details {
   background-color: rgba(182, 112, 52, 0.7);
   padding: 10px 0;
@@ -533,6 +550,7 @@ body {
 .bank-details p {
   margin: 5px 0;
   color: white;
+  
 }
 
 .bank-details select {
