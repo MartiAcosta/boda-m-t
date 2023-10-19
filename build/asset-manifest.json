@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2812b954.css",
-    "main.js": "/static/js/main.a5eabc3b.js",
+    "main.css": "/static/css/main.1602a0a6.css",
+    "main.js": "/static/js/main.a8db1063.js",
     "static/js/787.2e99565e.chunk.js": "/static/js/787.2e99565e.chunk.js",
     "static/media/o657.jpg": "/static/media/o657.ac7976191b13854466e8.jpg",
     "static/media/IMG_5002.jpg": "/static/media/IMG_5002.c4da314d14ec1c1b74c9.jpg",
@@ -10,14 +10,17 @@
     "static/media/FontsFree-Net-Montigny-Regular.ttf": "/static/media/FontsFree-Net-Montigny-Regular.7553117191fb238bb202.ttf",
     "static/media/imgcircle.PNG": "/static/media/imgcircle.86b6af76aa54b646e9cf.PNG",
     "static/media/amsterdam-one.ttf": "/static/media/amsterdam-one.8cac007d348adcf279c9.ttf",
+    "static/media/aliandas 1.png": "/static/media/aliandas 1.fef0eaca339bf530e306.png",
+    "static/media/spotify.png": "/static/media/spotify.0d827b4e558c71602451.png",
+    "static/media/Mask group.png": "/static/media/Mask group.97b6f995d1aef08096f1.png",
     "static/media/dress.png": "/static/media/dress.dcd3bd1894c62579d6ed.png",
     "index.html": "/index.html",
-    "main.2812b954.css.map": "/static/css/main.2812b954.css.map",
-    "main.a5eabc3b.js.map": "/static/js/main.a5eabc3b.js.map",
+    "main.1602a0a6.css.map": "/static/css/main.1602a0a6.css.map",
+    "main.a8db1063.js.map": "/static/js/main.a8db1063.js.map",
     "787.2e99565e.chunk.js.map": "/static/js/787.2e99565e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2812b954.css",
-    "static/js/main.a5eabc3b.js"
+    "static/css/main.1602a0a6.css",
+    "static/js/main.a8db1063.js"
   ]
 }

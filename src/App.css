@@ -39,7 +39,7 @@ body {
 
 .rectanguloPadre {
   width: 1000px;
-  height: 4100px;
+  height: 4430px;
   margin-top: 50px;
   border-radius: 69px;
   background:#ffffffe0;
@@ -201,14 +201,16 @@ body {
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 185.5%;
+  line-height: 130%;
   letter-spacing: 1.17px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
+
 
 .casarnos {
   color: #ffffff;
@@ -289,6 +291,57 @@ body {
   
 }
 
+.iconAnillos {
+  height: 70px; /* Ajusta según el tamaño de tu ícono */
+  width: 70px;  /* Ajusta según el tamaño de tu ícono */
+  margin-top: 20px;
+  margin-left: 110px;
+}
+
+.alianzas {
+  background-size: 130px;
+  width: 160%;
+  height: 120%;
+  background-image: url('../src/img/aliandas 1.png');
+  background-size: contain; /* Asegura que la imagen se ajuste al contenedor */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconSpotify{
+  height: 70px; /* Ajusta según el tamaño de tu ícono */
+  width: 70px;  /* Ajusta según el tamaño de tu ícono */
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 110px;
+}
+
+.spotify {
+  background-size: 130px;
+  width: 160%;
+  height: 120%;
+  background-image: url('../src/img/spotify.png');
+  background-size: contain; /* Asegura que la imagen se ajuste al contenedor */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .iconDance { 
+  height: 70px; 
+  width: 70px;  
+  margin-left: 100px;
+}
+
+.dance {
+  background-size: 130px;
+  width: 350%;
+  height: 300%;
+  background-image: url('../src/img/Mask\ group.png');
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
 .cards1{
   display: flex;
   justify-content: center; /* Centra horizontalmente */
@@ -348,6 +401,21 @@ body {
   height: 516.206px;
   flex-shrink: 0;
   background: rgba(138, 149, 149, 0.95);
+} 
+
+.tarjeta4 p{ 
+  display: flex;
+  transform: rotate(-0.199deg);
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 100%; /* 39.125px */
 }
 
 .img3{
@@ -421,6 +489,34 @@ body {
   align-items: center;     
 }
 
+.cardNinos {
+  width: 1000px;
+  height: 420px;
+  background-color: rgba(182, 112, 52, 0.60);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.titulo {
+  font-family: 'montigny';
+  font-size: 100px;
+  margin: 0; /* Elimina el margen predeterminado de los párrafos */
+  color: white; /* Asumiendo que quieres que el texto sea blanco. Ajusta según sea necesario */
+}
+
+.mensaje {
+  font-size: 24px; /* Ajusta según sea necesario */
+  text-align: center;
+  margin: 10px 0;
+  color: #FFF;
+  font-family: 'Open Sans';
+}
 .container2 {
   display: flex;            /* Habilita Flexbox */
   align-items: center;      /* Centra los hijos verticalmente */
@@ -478,10 +574,29 @@ body {
   color: #B67034;
   border-radius: 18px;   
   font-size: 26px;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-weight: 400;
   line-height: 185.5%; 
-  outline: none;; 
+  outline: none;
+}
+
+.buttonSpotify {
+  width: 253px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 27px 28px;
+  border: none;
+  cursor: pointer;
+  background-color: #FFF;
+  color: #8A9595;
+  border-radius: 18px;
+  font-size: 26px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  line-height: 185.5%;
+  outline: none;
 }
 
 .modal {
@@ -522,22 +637,41 @@ body {
   margin-bottom: -11px;
 }
 
-.confirmation-message{
+.confirmation-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Esto centrará el ícono y el texto en el medio del contenedor */
+  justify-content: center; /* Esto centrará el ícono y el texto verticalmente en el contenedor */
   background-color: rgba(182, 112, 52, 0.7);
-  padding: 10px 0;
+  padding: 48px 0;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin: 16px;
   text-align: center;
   height: 348px;
 }
 
-.confirmation-message p{
-  margin: 62px 0;
+.confirmation-message p {
+  margin: 10px 0;
   color: white;
-  font-size: 35px;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 400;
-  margin-top: 138px;
+  font-weight: 200;
+}
+
+.iconDance { 
+  height: 200px;
+  width: 70px;
+  margin-bottom: 80px;
+  margin-top: 50px;
+}
+
+.dance {
+  width: 150%;
+  height: 600%;
+  background-image: url('../src/img/Mask\ group.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .bank-details {
@@ -573,7 +707,7 @@ body {
 
 .bank-details-menu select {
   width: 175px;
-  height: 30px;
+  height: 40px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.87);
   border: none;
@@ -624,10 +758,12 @@ body {
 
 .form-group input {
   width: 200px;
-  height: 35px;
+  height: 42px;
   border-radius: 12px;
   background-color: rgba(182, 113, 52, 0.445);
-  border: none,
+  border: none;
+  color: white;
+  padding-left: 10px;
 }
 
 
@@ -689,9 +825,9 @@ input::placeholder {
   color: rgba(182, 112, 52, 0.93);
   border: none; /* No border */
   font-size: 22px; /* Tamaño de fuente más grande para hacerlo más visible */
-  font-weight: 600; /* Hacer la X un poco más gruesa */
+  font-weight: 400; /* Hacer la X un poco más gruesa */
   position: absolute; /* Posicionamiento absoluto dentro de su contenedor relativo más cercano */
-  top: 10px; /* Espacio desde la parte superior del modal */
+  top: 12px; /* Espacio desde la parte superior del modal */
   right: 10px; /* Espacio desde la derecha del modal */
   cursor: pointer; /* Cambia el cursor a una mano cuando pasas por encima */
 }

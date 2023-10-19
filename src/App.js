@@ -31,6 +31,11 @@ function App() {
     [targetDate]
   );
 
+
+  const handleClickSpotify = () => {
+    window.location.href = 'https://spotify.link/MPxJfs2a2Db'
+  };
+
   const handleClick = () => {
     window.location.href = 'https://maps.apple.com/?ll=-31.063378,-61.460237&q=Marcador&t=h';
   };
@@ -97,6 +102,9 @@ function App() {
             <div className="tarjeta1">
               <div className="tarjeta2">
                 <div className="text">
+                  <div className='iconAnillos'>
+                    <div className='alianzas'></div>
+                  </div>
                   <p
                     style={{
                       fontSize: '90px',
@@ -108,8 +116,8 @@ function App() {
                     Celebración
                   </p>
                   <p style={{ fontSize: '45px', fontWeight: '400' }}>Salón</p>
-                  <p style={{ fontSize: '31px', fontWeight: '100' }}>María Hotel</p>
-                  <p style={{ fontSize: '31px', fontWeight: '100' }}>& Eventos</p>
+                  <p style={{ fontSize: '25px', fontWeight: '100' }}>María Hotel</p>
+                  <p style={{ fontSize: '25px', fontWeight: '100' }}>& Eventos</p>
                   <p style={{ fontSize: '34px', fontWeight: '600' }}>19 hs</p>
                   <div
                     style={{
@@ -132,32 +140,36 @@ function App() {
             <div className="img3" />
             <div className="tarjeta3">
               <div className="tarjeta4">
-                {/* <p style={{color:'#fff', fontFamil: 'montigny',  fontSize:'30px', fontStyle: 'normal', fontWeight: '400', lineHeight: '72%' }}>Celebración</p>
-                <p style={{color:'#fff', fontFamil: 'Open Seans',  fontSize:'20px', fontStyle: 'normal', fontWeight: '400', lineHeight: '72%' }}>Salón</p>
-                <p>María Hotel & Eventos</p>
-                <p>19 hs</p>
-                <button style={{color:'#B670349C', fontFamily: 'Open Sans',borderRadius: '16px',  width: '241px', height: '21px', flexShrink: 0}}>¿Cómo llegar?</button>
-                */}
+                  <div className='iconSpotify'>
+                    <div className='spotify'></div>
+                  </div>
+                  <p>Queremos divertirnos junto</p>
+                  <p>a vos, por eso nos gustaria</p>
+                  <p>que nos sugieras qué no</p>
+                  <p>pueden faltar en nuestra</p>
+                  <p>boda</p>
+                  <p>¡Esperamos tus canciones</p>
+                  <p>favoritas acá!</p>
+                  <div
+                    style={{
+                      marginTop: '16px',
+                      marginLeft: '52px',
+                      boxshadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
+                    }}
+                  >
+                    <button onClick={handleClickSpotify} className="buttonSpotify">
+                      Ir a Spotify
+                    </button>
+                  </div>
               </div>
             </div>
           </div>
 
-          {/* <div className="cardDress">
-              <div className="dress">
-                <p style={{ fontFamily: 'montigny', fontSize: '100px' }}>No niños</p>
-                <div
-                  style={{
-                    width: '100%',
-                    height: '1px',
-                    backgroundColor: 'white',
-                    margin: '10px 0 10px'
-                  }}
-                />
-                <p>Amamos a sus pequeños pero queremos que este día</p>
-                <p>solo tengan que preocuparse por pasarla increible.</p>
-              </div>
-            </div>
-          </div> */}
+          <div className="cardNinos">
+            <p className="titulo">No niños</p>
+            <p className="mensaje">Amamos a sus pequeños pero queremos que este día</p>
+            <p className="mensaje">solo tengan que preocuparse por pasarla increible.</p>
+          </div>
 
           <div className="cardDress">
             <div className="container2">

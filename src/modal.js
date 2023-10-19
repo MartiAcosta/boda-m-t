@@ -32,7 +32,12 @@ function ConfirmarInvitados({ onClose }) {
                     <button type="button" className="close-button" onClick={onClose}>X</button>
                     {confirmationDisplayed ? (
                         <div className="confirmation-message">
-                            <p>Te esperamos para celebrar</p>
+                            <div className='iconDance'>
+                                <div className='dance'></div>
+                            </div>
+                            <p>No olvides llevar calzado comodo</p>
+                            <p>para bailar sobre el pasto</p>
+                            <p style={{fontFamily:'montigny', fontSize: '75px'}}>Te esperamos</p>
                         </div>
                     ) : (
                         <div>
@@ -113,7 +118,7 @@ function ConfirmarInvitados({ onClose }) {
                                     </select>
                                 </div>
                             </form>
-                            <button className='bottomConfir' type="button" onClick={handleConfirInvitados}>Confirmar</button>
+                            <button className='bottomConfir' type="button" onClick={handleConfirInvitados}>Aceptar</button>
                         </div>
 
                     )}
