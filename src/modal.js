@@ -32,7 +32,6 @@ function ConfirmarInvitados({ onClose }) {
                     <button type="button" className="close-button" onClick={onClose}>X</button>
                     {confirmationDisplayed ? (
                         <div className="confirmation-message">
-                            <p style={{fontFamily: 'montigny', fontSize: '35px'}}>Gracias</p>
                             <p>Te esperamos para celebrar</p>
                         </div>
                     ) : (
@@ -40,16 +39,16 @@ function ConfirmarInvitados({ onClose }) {
                             <div className="intro-section">
                                 <p>Estamos emocionados de compartir este día especial con</p>
                                 <p>personas tan importantes para nosotros.</p>
-                                <p>Dado el formato exclusivo de nuestra celebración, hemos</p>
+                                {/* <p>Dado el formato exclusivo de nuestra celebración, hemos</p>
                                 <p>optado por una contribución por asistencia para cubrir los</p>
-                                <p>costos del evento.</p>
+                                <p>costos del evento.</p> */}
                             </div>
 
                             <div className="bank-details">
                                 <p>Contribución por asistencia:</p>
-                                <p style={{ fontWeight: 600, fontSize: '20px', marginTop: '2px' }}>$26600</p>
+                                <p style={{ fontWeight: 600, fontSize: '18px', marginTop: '2px' }}>$26600</p>
                                 <p>Datos de la Cuenta Bancaria:</p>
-                                <p style={{ fontWeight: 600, fontSize: '20px', marginTop: '2px' }}>5566 5687 5464 6456</p>
+                                <p style={{ fontWeight: 600, fontSize: '18px', marginTop: '2px' }}>5566 5687 5464 6456</p>
                             </div>
                             <div className="confirm-details">
                                 <p>Confirma tu asistencia</p>
@@ -96,7 +95,7 @@ function ConfirmarInvitados({ onClose }) {
                                     />
                                 </div>
 
-                                <div className="bank-details">
+                                <div className="bank-details-menu">
                                     <p>Queremos asegurarnos de que todos nuestros invitados</p>
                                     <p>disfruten de la comida en nuestro gran día. Si tienes alguna</p>
                                     <p>preferencia dietética, por favor seleccione una opción:</p>

@@ -494,14 +494,14 @@ body {
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center;     /* Centra el contenido verticalmente */
   background-color: rgba(0, 0, 0, 0); 
-  margin-top: 11px;
+  margin-top: -2px;
 }
 
 
 .modal-content {
   width: 80%; /* Ajusta según el diseño de tu modal */
   max-width: 500px; /* Asegura que el modal no sea demasiado grande */
-  padding: 30px;
+  padding: 18px;
   background-image: url('./img/o657.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -537,6 +537,7 @@ body {
   font-size: 35px;
   font-style: normal;
   font-weight: 400;
+  margin-top: 138px;
 }
 
 .bank-details {
@@ -547,15 +548,32 @@ body {
   text-align: center;
 }
 
-.bank-details p {
-  margin: 5px 0;
+.bank-details-menu {
+  background-color: rgba(182, 112, 52, 0.7);
+  padding: 10px 0;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bank-details-menu p {
+  margin: 3px 0;
   color: white;
+  font-size: 16px;
+  width: 500px;
   
 }
 
-.bank-details select {
-  width: 200px;
-  height: 40px;
+.bank-details p {
+  margin: 3px 0;
+  color: white;
+  font-size: 16px;
+  
+}
+
+.bank-details-menu select {
+  width: 175px;
+  height: 30px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.87);
   border: none;
@@ -565,6 +583,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 72%;
+  margin-top: 6px;
 }
 
 
@@ -579,7 +598,8 @@ body {
   font-size: 46px;
   font-style: normal;
   font-weight: 400;
-  line-height: 7%
+  line-height: 1px;
+  margin-bottom: 1px;
 }
 
 .form-container {
@@ -604,7 +624,7 @@ body {
 
 .form-group input {
   width: 200px;
-  height: 40px;
+  height: 35px;
   border-radius: 12px;
   background-color: rgba(182, 113, 52, 0.445);
   border: none,
@@ -661,7 +681,7 @@ input::placeholder {
   line-height: 72%;
   border: none;
   margin-left: 89px;
-  margin-top: 23px;
+  margin-top: 12px;
 }
 
 .close-button {
