@@ -818,6 +818,12 @@ input::placeholder {
   border: none;
   margin-left: 89px;
   margin-top: 12px;
+  transition: all 0.1s;  
+} 
+
+.bottomConfir:active {
+  background: rgba(182, 112, 52, 0.8);  
+  transform: translate(2px, 2px);  
 }
 
 .close-button {

@@ -17,11 +17,9 @@ function ConfirmarInvitados({ onClose }) {
 
     const handleConfirInvitados = async () => {
         try {
-            const response = await axios.post('http://localhost:3001/invitados', invitadosData);
-            console.log('Invitados creado:', response.data)
+            await axios.post('http://localhost:3001/invitados', invitadosData);
             setConfirmationDisplayed(true);
         } catch (error) {
-            console.log('Error al crear invitado', error);
         }
     }
 
@@ -114,7 +112,6 @@ function ConfirmarInvitados({ onClose }) {
                                         <option value="celiaco">Celíaco</option>
                                         <option value="vegano">Vegano</option>
                                         <option value="vegetariano">Vegetariano</option>
-                                        <option value="sinRestricciones">Sin restricciones</option>
                                     </select>
                                 </div>
                             </form>
