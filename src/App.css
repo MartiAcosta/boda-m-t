@@ -324,6 +324,7 @@ body {
   background-size: contain; /* Asegura que la imagen se ajuste al contenedor */
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 20px;
 }
 
 /* .iconDance { 
@@ -597,6 +598,7 @@ body {
   font-weight: 400;
   line-height: 185.5%;
   outline: none;
+  margin-top: 90px;
 }
 
 .modal {

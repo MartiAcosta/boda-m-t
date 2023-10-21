@@ -143,13 +143,13 @@ function App() {
                   <div className='iconSpotify'>
                     <div className='spotify'></div>
                   </div>
-                  <p>Queremos divertirnos junto</p>
-                  <p>a vos, por eso nos gustaria</p>
-                  <p>que nos sugieras qué no</p>
-                  <p>pueden faltar en nuestra</p>
-                  <p>boda</p>
-                  <p>¡Esperamos tus canciones</p>
-                  <p>favoritas acá!</p>
+                  <div style={{marginTop: '70px'}}>
+                    <p>Queremos divertirnos con</p>
+                    <p>vos y tus temas favoritos</p>
+                    <p>no pueden faltar en</p>
+                    <p>nuestra boda</p>
+                    <p>¿Los agregas?</p>
+                  </div>
                   <div
                     style={{
                       marginTop: '16px',
@@ -166,7 +166,7 @@ function App() {
           </div>
 
           <div className="cardNinos">
-            <p className="titulo">No niños</p>
+            <p className="titulo">Niños, dulce sueños</p>
             <p className="mensaje">Amamos a sus pequeños pero queremos que este día</p>
             <p className="mensaje">solo tengan que preocuparse por pasarla increible.</p>
           </div>
@@ -188,9 +188,9 @@ function App() {
                     margin: '10px 0 10px'
                   }}
                 />
-                <p>Elegante o elegante sport.</p>
-                <p>Si ves a una chica deslumbrante</p>
-                <p>vestida de rojo...esa es la novia.</p>
+                <p>Viviremos una noche de</p>
+                <p>mucha pasión, el color rojo</p>
+                <p>no es opción...lo lleva la novia.</p>
               </div>
             </div>
           </div>
@@ -199,10 +199,9 @@ function App() {
             <div className="circleContainer">
               <div className="circleConfir">
                 <div className="textGroup">
-                  <p>"¡Esperamos contar contigo</p>
-                  <p>en nuestro día especial!</p>
-                  <p>Por favor, confirma tu asistencia.</p>
-                  <p>¡Gracias!"</p>
+                  <p>"¡Nuestro único y más preciado</p>
+                  <p>regalo es tu presencia!</p>
+                  <p>¡No podes faltar!"</p>
                 </div>
                 <div style={{ marginTop: '30px' }}>
                   <button className="buttonConfir" onClick={() => setShowModal(true)}>
