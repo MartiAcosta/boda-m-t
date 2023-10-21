@@ -41,7 +41,6 @@ body {
   width: 1000px;
   height: 4430px;
   margin-top: 50px;
-  border-radius: 69px;
   background:#ffffffe0;
 }
 
@@ -464,9 +463,17 @@ body {
   flex-direction: column;
   align-items: flex-start; 
   justify-content: center; 
+  margin-bottom: 70px
 }
 
-.dress p {
+.tituloDress {
+ font-Family: 'montigny';
+ font-size: 100px;
+ color: #FFF;
+ margin-bottom: 10px;
+}
+
+.msjDress{
   color: #FFF;
   font-family: 'Open Sans';
   font-size: 24px;
@@ -875,20 +882,103 @@ input::placeholder {
   .rectanguloPadre {
     width: 90%;  /* Ajusta el ancho para que sea más adaptativo */
     margin: 20px auto;  /* Centra el contenedor y añade margen arriba y abajo */
+    height: auto;
   }
 
   .container {
     flex-direction: column;  /* Los hijos de .container se apilan verticalmente */
   }
 
-  .primerimg, .card {
-    margin: 20px 0;  /* Añade margen arriba y abajo */
+  .primerimg {
+    width: 100%;
+    margin: 20px 0;  
+  }
+
+  .img2, .img3{
+    width: 100%;
+    margin: 20px 0;  
+  }
+
+  .card {
+    width: 70%;
+    margin: 20px 0;  
+  }
+
+  .cardNinos{
+    width: 100%;
+    margin: 20px 0;  
+  }
+
+  .titulo {
+    font-size: 55px;
+  }
+
+  .mensaje{
+    font-size: 14px;
+  }
+
+  .circleDress {
+    width: 135px;
+    height: 135px;
+    margin-bottom: 100px;
+    border-radius: 140px;
+    right: 8%;
+  }
+
+  .iconContainer{
+    height: 120px;
+    width: 129px;
+  }
+
+  .iconDress {
+    background-size: 110px 100px;
+    width: 160px;
+    height: 152px;
+    left: 53%;
+  }
+
+  .dress{
+    margin-bottom: 50px;
+  }
+
+  .tituloDress{
+    font-size: 53px;
+    margin-bottom: -10px;
+  }
+
+  .msjDress{
+    font-size: 12.5px;
+    margin: 5px 0; 
+  }
+
+  .cardDress {
+    width: 100%;  /* Ajusta el ancho para que sea más adaptativo */
+    height: 250px; 
+    margin-top: 30px;
+    margin-bottom: 5px;
+    padding: 10px;
   }
 
   .cards1, .cards3 {
     flex-direction: column;  /* Las tarjetas se apilan verticalmente */
   }
+  
+  .circleConfir {
+    width: 100%;
+    height: 400px;
+    gap: 1px;
+  }
 
+  .circleConfir p{
+    font-size: 18px;
+  }
+
+  .buttonConfir{
+    width: 150px;
+    height: 30px;
+    font-size: 18px;
+    margin-bottom: 85px;
+  }
   .tarjeta1, .tarjeta3 {
     width: 90%;
     margin: 20px 0;  /* Añade margen arriba y abajo */
@@ -896,21 +986,6 @@ input::placeholder {
   
   .tarjeta2, .tarjeta4 {
     width: 80%;
-  }
-
-
-  /* Aquí puedes agregar más estilos específicos para pantallas pequeñas */
-}
-
-@media (max-width: 768px) {
-
-  .container {
-    flex-direction: column;  /* Los hijos de .container se apilan verticalmente */
-  }
-
-  .card {
-    width: 90%;  /* Ajusta el ancho para que sea más adaptativo */
-    margin: 20px auto;  /* Centra la tarjeta y añade margen arriba y abajo */
   }
 
   .text p {

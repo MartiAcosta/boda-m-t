@@ -5,7 +5,10 @@ const cors = require('cors');
 
 const app = express();
 const port = 3001;
-app.use(cors());
+
+app.use(cors({
+    origin: 'https://www.siquieromanuytania.com/'
+}));
 
 const pool = mysql.createPool({
     host: '193.203.166.12',

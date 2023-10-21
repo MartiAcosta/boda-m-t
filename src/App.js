@@ -179,7 +179,7 @@ function App() {
               </div>
 
               <div className="dress">
-                <p style={{ fontFamily: 'montigny', fontSize: '100px' }}>Dress Code</p>
+                <p className='tituloDress'>Dress Code</p>
                 <div
                   style={{
                     width: '100%',
@@ -188,9 +188,9 @@ function App() {
                     margin: '10px 0 10px'
                   }}
                 />
-                <p>Viviremos una noche de</p>
-                <p>mucha pasión, el color rojo</p>
-                <p>no es opción...lo lleva la novia.</p>
+                <p className='msjDress'>Viviremos una noche de</p>
+                <p className='msjDress'>mucha pasión, el color rojo</p>
+                <p className='msjDress'>no es opción...lo lleva la novia.</p>
               </div>
             </div>
           </div>
