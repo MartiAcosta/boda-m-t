@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import axios from 'axios';
 import ReactDOM from 'react-dom';
+import { computeHeadingLevel } from '@testing-library/react';
 
 function ConfirmarInvitados({ onClose }) {
 
@@ -20,6 +21,7 @@ function ConfirmarInvitados({ onClose }) {
             await axios.post('http://62.72.23.157:3001/invitados', invitadosData);
             setConfirmationDisplayed(true);
         } catch (error) {
+            console.log(error)
         }
     }
 
