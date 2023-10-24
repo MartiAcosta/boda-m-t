@@ -18,7 +18,7 @@ function ConfirmarInvitados({ onClose }) {
 
     const handleConfirInvitados = async () => {
         try {
-            await axios.post('https://62.72.23.157:443/invitados', invitadosData);
+            await axios.post('https://siquieromanuytania.com/invitados', invitadosData);
             setConfirmationDisplayed(true);
         } catch (error) {
             console.log(error)
