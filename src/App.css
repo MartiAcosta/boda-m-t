@@ -968,11 +968,20 @@ input::placeholder {
     margin-top: 77px;
   }
   
+  .buttonComollegar{
+    margin-left: -45px;
+    margin-top: 28px;
+  }
+
   .circleConfir {
     width: 100%;
     height: 400px;
     gap: 1px;
   }
+
+  .iconAnillos {
+    margin-left: 66px;
+}
 
   .circleConfir p{
     font-size: 18px;
@@ -984,6 +993,7 @@ input::placeholder {
     font-size: 18px;
     margin-bottom: 85px;
   }
+
   .tarjeta1, .tarjeta3 {
     width: 90%;
     margin: 20px 0;  /* Añade margen arriba y abajo */
