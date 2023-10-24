@@ -519,7 +519,7 @@ body {
 }
 
 .mensaje {
-  font-size: 24px; /* Ajusta según sea necesario */
+  font-size: 11.5px; /* Ajusta según sea necesario */
   text-align: center;
   margin: 10px 0;
   color: #FFF;
@@ -961,6 +961,11 @@ input::placeholder {
 
   .cards1, .cards3 {
     flex-direction: column;  /* Las tarjetas se apilan verticalmente */
+  }
+
+  .buttonSpotify {
+    margin-left: -33px;
+    margin-top: 77px;
   }
   
   .circleConfir {
