@@ -2,12 +2,29 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const cors = require('cors');
+const https = require('https'); // Importa el módulo https
+const fs = require('fs');
+const morgan = require('morgan');
+
+app.use(morgan('combined'));
 
 const app = express();
 const port = 3001;
 
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/siquieromanuytania.com/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/siquieromanuytania.com/fullchain.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/siquieromanuytania.com/chain.pem', 'utf8');
+
+const credentials = {
+    key: privateKey,
+    cert: certificate,
+    ca: ca,
+    secureProtocol: 'TLSv1_2_method'
+};
+
+
 app.use(cors({
-    origin: 'https://www.siquieromanuytania.com'
+    origin: 'https://siquieromanuytania.com'
 }));
 
 const pool = mysql.createPool({
@@ -24,6 +41,7 @@ app.use(bodyParser.json());
 app.get('/invitados', (req, res) => {
     pool.query('SELECT * FROM invitados', (err, results) => {
         if (err) throw err;
+        console.log(err)
         res.json(results);
     });
 });
@@ -33,6 +51,7 @@ app.post('/invitados', (req, res) => {
     const query = `INSERT INTO invitados (nombre, apellido, cod, tel, menu) VALUES ('${nombre}', '${apellido}', '${cod}', '${tel}', '${menu}')`;
     pool.query(query, (err, result) => {
         if (err) throw err;
+        console.log(err)
         res.json({ message: 'Invitado añadido', id: result.insertId });
     });
 });
@@ -43,6 +62,7 @@ app.put('/invitados/:id', (req, res) => {
     const query = `UPDATE invitados SET nombre='${nombre}', apellido='${apellido}', cod='${cod}', tel='${tel}', menu='${menu}' WHERE id='${id}'`;
     pool.query(query, (err, result) => {
         if (err) throw err;
+        console.log(err)
         res.json({ message: 'Invitado actualizado' });
     });
 });
@@ -56,6 +76,7 @@ app.delete('/invitados/:id', (req, res) => {
     });
 });
 
-app.listen(port, () => {
+const httpsServer = https.createServer(credentials, app);
+httpsServer.listen(port, () => {
     console.log(`Servidor corriendo en https://localhost:${port}`);
 });

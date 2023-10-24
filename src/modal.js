@@ -1,8 +1,8 @@
 import './App.css';
 import { useState } from 'react';
-import axios from 'axios';
+import axios from 'axios'; 
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { computeHeadingLevel } from '@testing-library/react';
 
 function ConfirmarInvitados({ onClose }) {
 
@@ -24,9 +24,8 @@ function ConfirmarInvitados({ onClose }) {
             console.log(error)
         }
     }
-
     return ReactDOM.createPortal(
-        <div>
+        <>
             <div className="modal">
                 <div className="modal-content">
                     <button type="button" className="close-button" onClick={onClose}>X</button>
@@ -123,7 +122,7 @@ function ConfirmarInvitados({ onClose }) {
                     )}
                 </div>
             </div>
-        </div>,
+        </>,
         document.body
     )
 }
