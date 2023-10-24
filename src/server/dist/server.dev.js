@@ -8,15 +8,14 @@ var mysql = require('mysql');
 
 var cors = require('cors');
 
-var https = require('https'); // Importa el módulo https
-
+var https = require('https');
 
 var fs = require('fs');
 
 var morgan = require('morgan');
 
-app.use(morgan('combined'));
 var app = express();
+app.use(morgan('combined'));
 var port = 3001;
 var privateKey = fs.readFileSync('/etc/letsencrypt/live/siquieromanuytania.com/privkey.pem', 'utf8');
 var certificate = fs.readFileSync('/etc/letsencrypt/live/siquieromanuytania.com/fullchain.pem', 'utf8');

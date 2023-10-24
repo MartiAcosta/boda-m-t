@@ -2,13 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const cors = require('cors');
-const https = require('https'); // Importa el módulo https
+const https = require('https'); 
 const fs = require('fs');
 const morgan = require('morgan');
 
-app.use(morgan('combined'));
-
 const app = express();
+app.use(morgan('combined'));
 const port = 3001;
 
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/siquieromanuytania.com/privkey.pem', 'utf8');
