@@ -308,11 +308,11 @@ body {
 }
 
 .iconSpotify{
-  height: 70px; /* Ajusta según el tamaño de tu ícono */
-  width: 70px;  /* Ajusta según el tamaño de tu ícono */
-  margin-top: 20px;
-  margin-bottom: 40px;
+  height: 70px;
+  margin-bottom: -7px;
   margin-left: 110px;
+  margin-top: 41px;
+  width: 70px;
 }
 
 .spotify {
@@ -530,6 +530,9 @@ body {
   align-items: center;      /* Centra los hijos verticalmente */
 }
 
+.circleTitle img {
+  height: 339px;
+}
 
 .circleContainer {
   width: 583px;
@@ -906,6 +909,7 @@ input::placeholder {
 
   .cardNinos{
     width: 100%;
+    height: 263px;
     margin: 20px 0;  
   }
 
@@ -914,7 +918,8 @@ input::placeholder {
   }
 
   .mensaje{
-    font-size: 14px;
+    font-size: 13px;
+    width: 358.5px;
   }
 
   .circleDress {
@@ -1003,30 +1008,34 @@ input::placeholder {
     width: 80%;
   }
 
+  .bar{
+    width: 319px;
+    border-radius: 0px;
+  }
+
   .text p {
-    font-size: 25px;  /* Reduce el tamaño de fuente */
+    font-size: 17px;
+    margin: 9px 0;/* Cambia el tamaño de la fuente si lo consideras necesario */
+    line-height: 1.5;
+    width: 300px;
   }
 
   .casarnos {
-    font-size: 40px;  /* Reduce el tamaño de fuente */
+    font-size: 30px;  /* Reduce el tamaño de fuente */
   }
 
   .square {
-    width: 120px;  /* Reduce el ancho del cuadrado */
-    height: 132px; /* Reduce el alto del cuadrado */
+    height: 92px;
+    width: 75px;
+    margin: 4px;
   }
 
   .square > div:first-child {
-    font-size: 50px;  /* Reduce el tamaño de fuente */
+    font-size: 28px;  /* Reduce el tamaño de fuente */
   }
 
   .square > div:nth-child(2) {
-    font-size: 16px;  /* Reduce el tamaño de fuente */
-  }
-
-  .squares-container {
-    flex-wrap: wrap;  /* Permite que los cuadrados se envuelvan en múltiples líneas si no hay suficiente espacio */
-    justify-content: space-around;  /* Distribuye el espacio alrededor de los cuadrados */
+    font-size: 11px;  /* Reduce el tamaño de fuente */
   }
 
   /* Aquí puedes agregar más estilos específicos para pantallas pequeñas */
