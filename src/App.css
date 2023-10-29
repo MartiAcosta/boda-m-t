@@ -850,7 +850,7 @@ input::placeholder {
   cursor: pointer; /* Cambia el cursor a una mano cuando pasas por encima */
 }
 
-/* Estilo adicional para quitar el foco azul en algunos navegadores */
+
 .close-button:focus {
   outline: none;
 }
