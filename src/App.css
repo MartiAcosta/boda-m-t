@@ -432,8 +432,8 @@ body {
 
 .iconContainer {
   position: relative;
-  width: 289.933px;  /* Ancho del círculo */
-  height: 286px;     /* Alto del círculo */
+  width: 289.933px;  
+  height: 286px;    
 }
 
 .circleDress {
