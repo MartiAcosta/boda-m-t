@@ -186,11 +186,12 @@ body {
   flex-direction: column;
   align-items: center;
   width: 1000px;
-  background-color:rgba(182, 112, 52, 0.60);
+  background-color:rgba(182, 112, 52, 0.60) !important;
   padding: 50px;
   margin: 20px 0 20px; /* Espaciado entre las tarjetas */
+  border-radius: inherit !important;
+  --bs-card-border-color: none !important;
 }
-
 
 .text p{ 
   margin: 1px;
@@ -291,10 +292,12 @@ body {
 }
 
 .iconAnillos {
-  height: 70px; /* Ajusta según el tamaño de tu ícono */
-  width: 70px;  /* Ajusta según el tamaño de tu ícono */
-  margin-top: 20px;
-  margin-left: 110px;
+  margin-top: 29px;
+  height: 55px;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .alianzas {
@@ -307,12 +310,123 @@ body {
   background-position: center;
 }
 
+.celebracion{
+  font-Size: 90px;
+  font-Weight: 400;
+  font-Family: 'montigny';
+  margin-Right: 20px;
+  display: flex;           
+  justify-content: center; 
+  align-items: center;  
+  margin: 1px;
+  color: #ffffff;
+  text-align: center;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 1.17px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.salon, .hs{
+  font-Size: 45px;
+  font-Weight: 400;
+  display: flex;           
+  justify-content: center; 
+  align-items: center;   
+  margin: 1px;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Open Sans';
+  margin: 1px;
+  color: #ffffff;
+  text-align: center;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 1.17px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.Hotel{
+  font-Size: 25px;
+  font-Weight: 100;
+  display: flex;           
+  justify-content: center; 
+  align-items: center;  
+  font-family: 'Open Sans'; 
+  margin: 1px;
+  color: #ffffff;
+  text-align: center;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 1.17px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.Evento{
+  font-Size: 25px;
+  font-Weight: 100;
+  display: flex;           
+  justify-content: center; 
+  align-items: center; 
+  font-family: 'Open Sans';  
+  margin: 1px;
+  color: #ffffff;
+  text-align: center;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: 1.17px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+
+.divLlegar{
+  margin-top: -30px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.divSpotify {
+    margin-top: -30px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+
+.ComoLlegarConfir{
+  width: 253px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 27px 28px;
+  border: none;
+  cursor: pointer;
+  background-color: #FFF;
+  color: #B67034;
+  border-radius: 18px;
+  font-size: 26px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  line-height: 185.5%;
+  outline: none;
+  margin-top: 41px;;
+}
+
 .iconSpotify{
   height: 70px;
   margin-bottom: -7px;
-  margin-left: 110px;
-  margin-top: 41px;
-  width: 70px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
 .spotify {
@@ -323,24 +437,8 @@ body {
   background-size: contain; /* Asegura que la imagen se ajuste al contenedor */
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 20px;
+  margin-top: 54px;
 }
-
-/* .iconDance { 
-  height: 70px; 
-  width: 70px;  
-  margin-left: 100px;
-}
-
-.dance {
-  background-size: 130px;
-  width: 350%;
-  height: 300%;
-  background-image: url('../src/img/Mask\ group.png');
-  background-size: contain; 
-  background-repeat: no-repeat;
-  background-position: center;
-} */
 
 .cards1{
   display: flex;
@@ -616,17 +714,18 @@ body {
   top: 0;          /* Comienza desde la parte superior de la ventana del navegador */
   left: 0;         /* Comienza desde la izquierda de la ventana del navegador */
   width: 100%;     /* Ocupa todo el ancho de la ventana del navegador */
-  height: 100%;    /* Ocupa todo el alto de la ventana del navegador */
+  height: 40%;   /* Ocupa todo el alto de la ventana del navegador */
   display: flex;
   justify-content: center; /* Centra el contenido horizontalmente */
   align-items: center;     /* Centra el contenido verticalmente */
   background-color: rgba(0, 0, 0, 0); 
-  margin-top: -2px;
+  margin-top: 193px;
+  border: none !important;
 }
 
 
 .modal-content {
-  width: 80%; /* Ajusta según el diseño de tu modal */
+  width: 45%; /* Ajusta según el diseño de tu modal */
   max-width: 500px; /* Asegura que el modal no sea demasiado grande */
   padding: 18px;
   background-image: url('./img/o657.jpg');
@@ -655,26 +754,34 @@ body {
   align-items: center; /* Esto centrará el ícono y el texto en el medio del contenedor */
   justify-content: center; /* Esto centrará el ícono y el texto verticalmente en el contenedor */
   background-color: rgba(182, 112, 52, 0.7);
-  padding: 48px 0;
+  padding: 10px 0;
   border-radius: 10px;
   margin: 16px;
   text-align: center;
-  height: 348px;
+  height: 336px;
 }
 
-.confirmation-message p {
-  margin: 10px 0;
+.confirmation-message-zapatos {
+  margin: 4px 0;
   color: white;
   font-size: 20px;
   font-style: normal;
   font-weight: 200;
 }
 
+.confirmation-message-esperamos{
+  font-family:'montigny';
+  font-size: 75px;
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 33px;
+}
+
 .iconDance { 
-  height: 200px;
-  width: 70px;
-  margin-bottom: 80px;
-  margin-top: 50px;
+  height: 100px;
+  width: 80px;
+  margin-bottom: 117px;
+  margin-left: -39px;
 }
 
 .dance {
@@ -690,7 +797,7 @@ body {
   background-color: rgba(182, 112, 52, 0.7);
   padding: 10px 0;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: -13px;
   text-align: center;
 }
 
@@ -700,14 +807,16 @@ body {
   border-radius: 10px;
   margin-bottom: 20px;
   text-align: center;
+  width: 478px;
 }
 
 .bank-details-menu p {
   margin: 3px 0;
   color: white;
-  font-size: 16px;
-  width: 500px;
-  
+  font-size: 13.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bank-details p {
@@ -729,6 +838,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 72%;
+  padding: 5px 10px;
   margin-top: 6px;
 }
 
@@ -745,7 +855,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1px;
-  margin-bottom: 1px;
+  margin-bottom: -3px;
 }
 
 .form-container {
@@ -815,6 +925,14 @@ input::-ms-input-placeholder {
 input::placeholder {
   color: white;
 }
+
+.container-bottomConfir{
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  height: 100%; 
+}
+
 .bottomConfir{
   width: 299px;
   height: 45px;
@@ -828,8 +946,9 @@ input::placeholder {
   font-weight: 400;
   line-height: 72%;
   border: none;
-  margin-left: 89px;
-  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -6px;
   transition: all 0.1s;  
 } 
 
@@ -855,11 +974,7 @@ input::placeholder {
   outline: none;
 }
 
-@media (min-width: 768px) {
-  .circleTitle {
-    width: 30%; 
-  }
-}
+
 @media (min-width: 1024px) {
   .circleTitle {
     width: 583px;
@@ -880,7 +995,41 @@ input::placeholder {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 320px) {
+  .form-group input {
+    width: 96px;
+  }
+
+  .bank-details-menu p {
+    font-size: 9px;
+  }
+}
+
 @media (max-width: 768px) {
+  .circleTitle {
+    width: 30%; 
+  }
+  .modal {
+    margin-top: 170px;
+  }
+
+  .modal-content {
+    width: 80%; /* Ajusta según el diseño de tu modal */
+    padding: 18px;
+  }
+
+  .confirmation-message-zapatos {
+    font-size: 14px;
+  }
+
+  .confirmation-message-esperamos{
+    font-size: 55px;
+  }
+
+  .iconDance {
+    height: 34px;
+  }
 
   .rectanguloPadre {
     width: 90%;  /* Ajusta el ancho para que sea más adaptativo */
@@ -890,6 +1039,20 @@ input::placeholder {
 
   .container {
     flex-direction: column;  /* Los hijos de .container se apilan verticalmente */
+  }
+
+  .form-group input {
+    width: 110px;
+    height: 35px;
+  }
+
+  .intro-section p {
+    margin-bottom: -4px;
+    font-size: 11px;
+  }
+
+  .bank-details {
+    margin-bottom: -15px;
   }
 
   .primerimg {
@@ -909,7 +1072,7 @@ input::placeholder {
 
   .cardNinos{
     width: 100%;
-    height: 263px;
+    height: 230px;
     margin: 20px 0;  
   }
 
@@ -920,6 +1083,7 @@ input::placeholder {
   .mensaje{
     font-size: 13px;
     width: 358.5px;
+    margin: 1px;
   }
 
   .circleDress {
@@ -968,14 +1132,53 @@ input::placeholder {
     flex-direction: column;  /* Las tarjetas se apilan verticalmente */
   }
 
-  .buttonSpotify {
-    margin-left: -33px;
-    margin-top: 77px;
+  .alianzas{
+    width: 120%;
+    height: 100%;
+  }
+
+  .celebracion {
+    font-Size: 60px;
   }
   
+  .salon, .hs {
+    font-Size: 30px;
+  }
+
+  .Hotel, .Evento {
+    font-Size: 20px;
+  }
+  .ComoLlegarConfir{
+    width: 184px;
+    height: 43px;
+    font-size: 19px;
+    margin-top: 51px;
+  }
+
+  .spotify {
+    width: 110%;
+    height: 100%;
+  }
+
+  .buttonSpotify {
+    width: 184px;
+    height: 43px;
+    font-size: 20px;
+    margin-top: 51px;
+  }
+
+  .tarjeta4 p {
+    font-size: 18px;
+  }
+
   .buttonComollegar{
     margin-left: -45px;
     margin-top: 28px;
+    margin-left: -13px;
+    margin-top: 57px;
+    width: 164px;
+    height: 44px;
+    font-size: 20px;
   }
 
   .circleConfir {
@@ -984,12 +1187,13 @@ input::placeholder {
     gap: 1px;
   }
 
-  .iconAnillos {
-    margin-left: 66px;
-}
-
   .circleConfir p{
     font-size: 18px;
+  }
+
+  .confirm-details p {
+    font-size: 40px;
+    margin-bottom: -4px;
   }
 
   .buttonConfir{
@@ -999,13 +1203,43 @@ input::placeholder {
     margin-bottom: 85px;
   }
 
+  .bottomConfir{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 351px;
+    font-size: 18px;
+  }
+
+  .bank-details-menu {
+    width: 100%;
+  }
+
+  .bank-details-menu p{
+    font-size: 11px;
+    width: 100%;
+  }
+  
+  .bank-details-menu select{
+    margin-left: -9px;
+    width: 136px;
+    height: 31px;
+    font-size: 12px;
+  }
+
   .tarjeta1, .tarjeta3 {
     width: 90%;
-    margin: 20px 0;  /* Añade margen arriba y abajo */
+    margin: 20px 0;
+    height: 492.22900000000004px;
   }
   
   .tarjeta2, .tarjeta4 {
     width: 80%;
+    height: 426.206px;
+  }
+
+  .bank-details p {
+    font-size: 12px;
   }
 
   .bar{

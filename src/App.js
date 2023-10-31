@@ -101,37 +101,22 @@ function App() {
           <div className="cards1">
             <div className="tarjeta1">
               <div className="tarjeta2">
-                <div className="text">
                   <div className='iconAnillos'>
                     <div className='alianzas'></div>
                   </div>
-                  <p
-                    style={{
-                      fontSize: '90px',
-                      fontWeight: '400',
-                      fontFamily: 'montigny',
-                      marginRight: '20px'
-                    }}
-                  >
+                  <p className='celebracion'>
                     Celebración
                   </p>
-                  <p style={{ fontSize: '45px', fontWeight: '400' }}>Salón</p>
-                  <p style={{ fontSize: '25px', fontWeight: '100' }}>María Hotel</p>
-                  <p style={{ fontSize: '25px', fontWeight: '100' }}>& Eventos</p>
-                  <p style={{ fontSize: '34px', fontWeight: '600' }}>19 hs</p>
-                  <div
-                    style={{
-                      marginTop: '16px',
-                      marginLeft: '52px',
-                      boxshadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
-                    }}
-                  >
-                    <button onClick={handleClick} className="buttonConfir">
+                  <p className='salon'>Salón</p>
+                  <p className='Hotel'>María Hotel</p>
+                  <p className='Evento' >& Eventos</p>
+                  <p className='hs'>19 hs</p>
+                  <div className='divLlegar'>
+                    <button onClick={handleClick} className="ComoLlegarConfir">
                       ¿Cómo llegar?
                     </button>
                   </div>
                 </div>
-              </div>
             </div>
             <div className="img2" />
           </div>
@@ -140,27 +125,27 @@ function App() {
             <div className="img3" />
             <div className="tarjeta3">
               <div className="tarjeta4">
-                  <div className='iconSpotify'>
-                    <div className='spotify'></div>
-                  </div>
-                  <div style={{marginTop: '70px'}}>
-                    <p>Queremos divertirnos con</p>
-                    <p>vos y tus temas favoritos</p>
-                    <p>no pueden faltar en</p>
-                    <p>nuestra boda</p>
-                    <p>¿Los agregas?</p>
-                  </div>
-                  <div
-                    style={{
-                      marginTop: '-30px',
-                      marginLeft: '52px',
-                      boxshadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
-                    }}
-                  >
-                    <button onClick={handleClickSpotify} className="buttonSpotify">
-                      Ir a Spotify
-                    </button>
-                  </div>
+                <div className='iconSpotify'>
+                  <div className='spotify'></div>
+                </div>
+                <div style={{ marginTop: '90px' }}>
+                  <p>Queremos divertirnos con</p>
+                  <p>vos y tus temas favoritos</p>
+                  <p>no pueden faltar en</p>
+                  <p>nuestra boda</p>
+                  <p>¿Los agregas?</p>
+                </div>
+                <div className='divSpotify'
+                  // style={{
+                  //   marginTop: '-30px',
+                  //   marginLeft: '52px',
+                  //   boxshadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)'
+                  // }}
+                >
+                  <button onClick={handleClickSpotify} className="buttonSpotify">
+                    Ir a Spotify
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -17,13 +17,42 @@ function ConfirmarInvitados({ onClose }) {
     const [confirmationDisplayed, setConfirmationDisplayed] = useState(false);
 
     const handleConfirInvitados = async () => {
-        try {
-            await axios.post('https://siquieromanuytania.com/invitados', invitadosData);
-            setConfirmationDisplayed(true);
-        } catch (error) {
-            console.log(error)
+        if (validateForm()) {
+            try {
+                await axios.post('https://siquieromanuytania.com/invitados', invitadosData);
+                setConfirmationDisplayed(true);
+            } catch (error) {
+                console.log(error)
+            }
+        } else {
+            // Puedes mostrar un mensaje de error o hacer algo más si la validación falla
+            console.log('Validación fallida');
         }
     }
+
+    const validateForm = () => {
+        const { nombre, apellido, cod, tel } = invitadosData;
+    
+        if (!nombre.trim() || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(nombre)) {
+            return false;
+        }
+        
+        if (!apellido.trim() || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(apellido)) {
+            return false;
+        }
+        
+        if (!cod.trim() || !/^\d+$/.test(cod)) {
+            return false;
+        }
+        
+        if (!tel.trim() || !/^\d+$/.test(tel)) {
+            return false;
+        }
+        
+        return true;
+    }
+
+
     return ReactDOM.createPortal(
         <>
             <div className="modal">
@@ -34,9 +63,9 @@ function ConfirmarInvitados({ onClose }) {
                             <div className='iconDance'>
                                 <div className='dance'></div>
                             </div>
-                            <p>No olvides llevar calzado comodo</p>
-                            <p>para bailar sobre el pasto</p>
-                            <p style={{fontFamily:'montigny', fontSize: '75px'}}>Te esperamos</p>
+                            <p className='confirmation-message-zapatos'>No olvides llevar calzado comodo</p>
+                            <p className='confirmation-message-zapatos'>para bailar sobre el pasto</p>
+                            <p className='confirmation-message-esperamos'>Te esperamos</p>
                         </div>
                     ) : (
                         <div>
@@ -116,7 +145,9 @@ function ConfirmarInvitados({ onClose }) {
                                     </select>
                                 </div>
                             </form>
-                            <button className='bottomConfir' type="button" onClick={handleConfirInvitados}>Aceptar</button>
+                            <div className='container-bottomConfir'>
+                                <button className='bottomConfir' type="button" onClick={handleConfirInvitados}>Aceptar</button>
+                            </div>
                         </div>
 
                     )}
