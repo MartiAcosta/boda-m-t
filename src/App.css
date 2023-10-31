@@ -121,7 +121,7 @@ body {
   background-image: url('../src/img/DSC_0108.JPG');
   background-size: cover;  
   background-repeat: no-repeat; 
-  background-position: center;   
+  background-position: 45%; 
   margin: 20px 10px 20px 10px;
 }
 
