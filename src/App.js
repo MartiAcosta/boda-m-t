@@ -33,7 +33,7 @@ function App() {
 
 
   const handleClickSpotify = () => {
-    window.location.href = 'https://spotify.link/MPxJfs2a2Db'
+    window.location.href = 'https://open.spotify.com/playlist/1uEM9XSxPXcBu5Pp6RHUaU?si=a9ecbb2330594ccf&pt=5d64223be4145356c3b74b26ef518b6a'
   };
 
   const handleClick = () => {
