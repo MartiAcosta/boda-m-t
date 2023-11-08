@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import axios from 'axios'; 
+import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -32,23 +32,23 @@ function ConfirmarInvitados({ onClose }) {
 
     const validateForm = () => {
         const { nombre, apellido, cod, tel } = invitadosData;
-    
+
         if (!nombre.trim() || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(nombre)) {
             return false;
         }
-        
+
         if (!apellido.trim() || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(apellido)) {
             return false;
         }
-        
+
         if (!cod.trim() || !/^\d+$/.test(cod)) {
             return false;
         }
-        
+
         if (!tel.trim() || !/^\d+$/.test(tel)) {
             return false;
         }
-        
+
         return true;
     }
 
@@ -70,18 +70,30 @@ function ConfirmarInvitados({ onClose }) {
                     ) : (
                         <div>
                             <div className="intro-section">
-                                <p>Estamos emocionados de compartir este día especial con</p>
-                                <p>personas tan importantes para nosotros.</p>
+                                <p>Precio válido hasta el aterrizaje final el 20/12/2023</p>
+                                <p>Si preferis tomar las cosas paso a paso, optar por 3 cuotas.</p>
                                 {/* <p>Dado el formato exclusivo de nuestra celebración, hemos</p>
                                 <p>optado por una contribución por asistencia para cubrir los</p>
                                 <p>costos del evento.</p> */}
                             </div>
 
                             <div className="bank-details">
-                                <p>Contribución por asistencia:</p>
-                                <p style={{ fontWeight: 600, fontSize: '18px', marginTop: '2px' }}>$26600</p>
-                                <p>Datos de la Cuenta Bancaria:</p>
-                                <p style={{ fontWeight: 600, fontSize: '18px', marginTop: '2px' }}>5566 5687 5464 6456</p>
+                                <div className="detail-row-value">
+                                    <p>Valor tarjeta:</p>
+                                    <p className="detail-value">$39000</p>
+                                </div>
+                                <div className="detail-row">
+                                    <p>Cbu:</p>
+                                    <p className="detail-value"> 0000003100096445598156</p>
+                                </div>
+                                <div className="detail-row">
+                                    <p>Alias:  </p>
+                                    <p className="detail-value"> boda.taniymanu</p>
+                                </div>
+                                <div className="detail-row">
+                                    <p>Asunto:  </p>
+                                    <p className="detail-value"> LUNA DE MIEL</p>
+                                </div>
                             </div>
                             <div className="confirm-details">
                                 <p>Confirma tu asistencia</p>

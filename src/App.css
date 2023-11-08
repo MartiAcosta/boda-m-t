@@ -795,11 +795,45 @@ body {
 
 .bank-details {
   background-color: rgba(182, 112, 52, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: -13px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bank-details p {
+  margin: 3px 2px;
+  color: white;
+  font-size: 16px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.detail-row-value {
+  padding: 0 10px;
+}
+
+.detail-title,
+.detail-value {
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 2px;
+}
+
+/* .bank-details {
+  background-color: rgba(182, 112, 52, 0.7);
   padding: 10px 0;
   border-radius: 10px;
   margin-bottom: -13px;
   text-align: center;
-}
+} */
 
 .bank-details-menu {
   background-color: rgba(182, 112, 52, 0.7);
@@ -819,12 +853,12 @@ body {
   align-items: center;
 }
 
-.bank-details p {
+/* .bank-details p {
   margin: 3px 0;
   color: white;
   font-size: 16px;
   
-}
+} */
 
 .bank-details-menu select {
   width: 175px;
@@ -1048,7 +1082,7 @@ input::placeholder {
 
   .intro-section p {
     margin-bottom: -4px;
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .bank-details {
@@ -1269,7 +1303,7 @@ input::placeholder {
   }
 
   .square > div:nth-child(2) {
-    font-size: 11px;  /* Reduce el tamaño de fuente */
+    font-size: 12px;  /* Reduce el tamaño de fuente */
   }
 
   /* Aquí puedes agregar más estilos específicos para pantallas pequeñas */
