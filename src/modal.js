@@ -62,9 +62,9 @@ function ConfirmarInvitados({ onClose }) {
             delete newErrors.nombre;
         } else if (name === 'apellido' && value.trim() && /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(value)) {
             delete newErrors.apellido;
-        } else if (name === 'codigo' && value.trim() && /^\d+$/.test(value)) {
+        } else if (name === 'cod' && value.trim() && /^\d+$/.test(value)) {
             delete newErrors.cod;
-        } else if (name === 'telefono' && value.trim() && /^\d+$/.test(value)) {
+        } else if (name === 'tel' && value.trim() && /^\d+$/.test(value)) {
             delete newErrors.tel;
         } 
 
