@@ -1081,7 +1081,8 @@ input::placeholder {
   }
 
   .intro-section p {
-    margin-bottom: -4px;
+    margin-top: 23px;
+    margin-bottom: -19px;
     font-size: 10px;
   }
 

@@ -70,17 +70,17 @@ function ConfirmarInvitados({ onClose }) {
                     ) : (
                         <div>
                             <div className="intro-section">
-                                <p>Precio válido hasta el aterrizaje final el 20/12/2023</p>
-                                <p>Si preferis tomar las cosas paso a paso, optar por 3 cuotas.</p>
+                                {/* <p>Precio valido de contado hasta el 20/12/2023</p> */}
+                                
                                 {/* <p>Dado el formato exclusivo de nuestra celebración, hemos</p>
                                 <p>optado por una contribución por asistencia para cubrir los</p>
                                 <p>costos del evento.</p> */}
                             </div>
-
-                            <div className="bank-details">
+                        <div className="bank-details">
                                 <div className="detail-row-value">
                                     <p>Valor tarjeta:</p>
                                     <p className="detail-value">$39000</p>
+                                    <p>(hasta el 20/12/23)</p>
                                 </div>
                                 <div className="detail-row">
                                     <p>Cbu:</p>
@@ -95,6 +95,14 @@ function ConfirmarInvitados({ onClose }) {
                                     <p className="detail-value"> LUNA DE MIEL</p>
                                 </div>
                             </div>
+                            <div className="intro-section">
+                                <p>Si preferis tomar las cosas paso a paso, optar por 3 cuotas de $15000.</p>
+                                {/* <p>Dado el formato exclusivo de nuestra celebración, hemos</p>
+                                <p>optado por una contribución por asistencia para cubrir los</p>
+                                <p>costos del evento.</p> */}
+                            </div>
+
+
                             <div className="confirm-details">
                                 <p>Confirma tu asistencia</p>
                             </div>
