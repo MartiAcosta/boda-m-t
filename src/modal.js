@@ -14,44 +14,62 @@ function ConfirmarInvitados({ onClose }) {
         menu: '',
     })
 
+    const [errorMessages, setErrorMessages] = useState({});
     const [confirmationDisplayed, setConfirmationDisplayed] = useState(false);
 
     const handleConfirInvitados = async () => {
-        if (validateForm()) {
+        const errors = validateForm();
+        if (Object.keys(errors).length === 0) {
             try {
                 await axios.post('https://siquieromanuytania.com/invitados', invitadosData);
                 setConfirmationDisplayed(true);
             } catch (error) {
-                console.log(error)
+                console.log(error);
             }
         } else {
-            // Puedes mostrar un mensaje de error o hacer algo más si la validación falla
-            console.log('Validación fallida');
+            setErrorMessages(errors);
         }
     }
+
 
     const validateForm = () => {
-        const { nombre, apellido, cod, tel } = invitadosData;
-
-        if (!nombre.trim() || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(nombre)) {
-            return false;
+        let errors = {};
+        if (!invitadosData.nombre.trim() || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(invitadosData.nombre)) {
+            errors.nombre = 'Nombre inválido o vacío';
         }
 
-        if (!apellido.trim() || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(apellido)) {
-            return false;
+        if (!invitadosData.apellido.trim() || !/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(invitadosData.apellido)) {
+            errors.apellido = 'Apellido inválido o vacío';
         }
 
-        if (!cod.trim() || !/^\d+$/.test(cod)) {
-            return false;
+        if (!invitadosData.cod.trim() || !/^\d+$/.test(invitadosData.cod)) {
+            errors.cod = 'Código de área inválido o vacío';
         }
 
-        if (!tel.trim() || !/^\d+$/.test(tel)) {
-            return false;
+        if (!invitadosData.tel.trim() || !/^\d+$/.test(invitadosData.tel)) {
+            errors.tel = 'Teléfono inválido o vacío';
         }
 
-        return true;
+        return errors;
     }
 
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setInvitadosData({ ...invitadosData, [name]: value });
+
+        const newErrors = { ...errorMessages };
+        if (name === 'nombre' && value.trim() && /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(value)) {
+            delete newErrors.nombre;
+        } else if (name === 'apellido' && value.trim() && /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]*$/.test(value)) {
+            delete newErrors.apellido;
+        } else if (name === 'codigo' && value.trim() && /^\d+$/.test(value)) {
+            delete newErrors.cod;
+        } else if (name === 'telefono' && value.trim() && /^\d+$/.test(value)) {
+            delete newErrors.tel;
+        } 
+
+        setErrorMessages(newErrors);
+    };
 
     return ReactDOM.createPortal(
         <>
@@ -71,12 +89,12 @@ function ConfirmarInvitados({ onClose }) {
                         <div>
                             <div className="intro-section">
                                 {/* <p>Precio valido de contado hasta el 20/12/2023</p> */}
-                                
+
                                 {/* <p>Dado el formato exclusivo de nuestra celebración, hemos</p>
                                 <p>optado por una contribución por asistencia para cubrir los</p>
                                 <p>costos del evento.</p> */}
                             </div>
-                        <div className="bank-details">
+                            <div className="bank-details">
                                 <div className="detail-row-value">
                                     <p>Valor tarjeta:</p>
                                     <p className="detail-value">$39000</p>
@@ -96,10 +114,7 @@ function ConfirmarInvitados({ onClose }) {
                                 </div>
                             </div>
                             <div className="intro-section">
-                                <p>Si preferis tomar las cosas paso a paso, optar por 3 cuotas de $15000.</p>
-                                {/* <p>Dado el formato exclusivo de nuestra celebración, hemos</p>
-                                <p>optado por una contribución por asistencia para cubrir los</p>
-                                <p>costos del evento.</p> */}
+                                <p>Si preferis tomar las cosas paso a paso, optar por <span style={{ fontWeight: 'bold', backgroundColor: 'rgba(182, 112, 52, 0.60)', color: 'white' }}>  3 cuotas de $15000</span>.</p>
                             </div>
 
 
@@ -114,8 +129,9 @@ function ConfirmarInvitados({ onClose }) {
                                         name='nombre'
                                         placeholder='Nombre'
                                         value={invitadosData.nombre}
-                                        onChange={e => setInvitadosData({ ...invitadosData, nombre: e.target.value })}
+                                        onChange={handleInputChange}
                                     />
+                                    {errorMessages.nombre && <div className="error">{errorMessages.nombre}</div>}
                                 </div>
 
                                 <div className="form-group">
@@ -123,9 +139,11 @@ function ConfirmarInvitados({ onClose }) {
                                         type="text"
                                         id="apellido"
                                         placeholder="Apellido"
+                                        name='apellido'
                                         value={invitadosData.apellido}
-                                        onChange={e => setInvitadosData({ ...invitadosData, apellido: e.target.value })}
+                                        onChange={handleInputChange}
                                     />
+                                    {errorMessages.apellido && <div className="error">{errorMessages.apellido}</div>}
                                 </div>
 
                                 <div className="form-group">
@@ -133,9 +151,11 @@ function ConfirmarInvitados({ onClose }) {
                                         type="text"
                                         id="codigo"
                                         placeholder='Codigo de area'
-                                        value={invitadosData.dni}
-                                        onChange={e => setInvitadosData({ ...invitadosData, cod: e.target.value })}
+                                        name='cod'
+                                        value={invitadosData.cod}
+                                        onChange={handleInputChange}
                                     />
+                                    {errorMessages.cod && <div className="error">{errorMessages.cod}</div>}
                                 </div>
 
                                 <div className="form-group">
@@ -143,9 +163,11 @@ function ConfirmarInvitados({ onClose }) {
                                         type="text"
                                         id="telefono"
                                         placeholder='Telefono'
+                                        name='tel'
                                         value={invitadosData.tel}
-                                        onChange={e => setInvitadosData({ ...invitadosData, tel: e.target.value })}
+                                        onChange={handleInputChange}
                                     />
+                                    {errorMessages.tel && <div className="error">{errorMessages.tel}</div>}
                                 </div>
 
                                 <div className="bank-details-menu">

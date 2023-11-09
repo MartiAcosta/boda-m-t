@@ -152,7 +152,7 @@ function App() {
 
           <div className="cardNinos">
             <p className="titulo">Niños, dulce sueños</p>
-            <p className="mensaje">Amamos a sus pequeños pero este evento es solo para el disfrute de los adulto.</p>
+            <p className="mensaje">Amamos a sus pequeños pero este evento es solo para el disfrute de los adultos.</p>
             {/* <p className="mensaje">solo tengan que preocuparse por pasarla increible.</p> */}
           </div>
 

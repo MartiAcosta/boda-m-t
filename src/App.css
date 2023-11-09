@@ -193,6 +193,11 @@ body {
   --bs-card-border-color: none !important;
 }
 
+.error {
+  font-size: 11px;
+  color: red;
+}
+
 .text p{ 
   margin: 1px;
   color: #ffffff;
@@ -1112,12 +1117,12 @@ input::placeholder {
   }
 
   .titulo {
-    font-size: 55px;
+    font-size: 50px;
   }
 
   .mensaje{
     font-size: 13px;
-    width: 358.5px;
+    width: 327.5px;
     margin: 1px;
   }
 
