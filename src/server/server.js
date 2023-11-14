@@ -45,7 +45,23 @@ app.get('/invitados', (req, res) => {
     });
 });
 
+app.get('/invitados/:id', (req, res) => {
+    const id = req.params.id;
+    pool.query('SELECT * FROM invitados WHERE id = ?', [id], (err, results) => {
+        if (err) {
+            console.error('Error al obtener el invitado:', err);
+            return res.status(500).json({ message: 'Error al obtener el invitado' });
+        }
+        if (results.length > 0) {
+            res.json(results[0]);
+        } else {
+            res.status(404).json({ message: 'Invitado no encontrado' });
+        }
+    });
+});
+
 app.post('/invitados', (req, res) => {
+    console.log(req.body);
     const { nombre, apellido, cod, tel, menu } = req.body;
     const query = `INSERT INTO invitados (nombre, apellido, cod, tel, menu) VALUES ('${nombre}', '${apellido}', '${cod}', '${tel}', '${menu}')`;
     pool.query(query, (err, result) => {
@@ -68,7 +84,7 @@ app.put('/invitados/:id', (req, res) => {
 
 app.delete('/invitados/:id', (req, res) => {
     const id = req.params.id;
-    const query = `DELETE FROM invitados WHERE id'=${id}'`;
+    const query = `DELETE FROM invitados WHERE id=${id}`;
     pool.query(query, (err, result) => {
         if (err) throw err;
         res.json({ message: 'Invitado eliminado' });
