@@ -23,7 +23,6 @@ function ConfirmarInvitados({ onClose }) {
             try {
                 await axios.post('https://siquieromanuytania.com/invitados', invitadosData);
                 setConfirmationDisplayed(true);
-                console.log(invitadosData); 
             } catch (error) {
                 console.log(error);
             }

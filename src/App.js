@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import imgCircle from '../src/img/imgcircle.PNG';
 import ConfirmarInvitados from './modal';
+import Table from './components/table'
 
 function App() {
   const targetDate = new Date('2024-02-02 19:00:00');
@@ -11,6 +12,27 @@ function App() {
     minutes: 0,
     seconds: 0
   });
+
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+  const [password, setPassword] = useState('');
+  const [showTable, setShowTable] = useState(false);
+  
+  const handleDateClick = () => {
+    setIsPasswordModalOpen(true);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handlePasswordSubmit = () => {
+    if (password === "laContraseñaSecreta") { 
+      setShowTable(true); 
+      setIsPasswordModalOpen(false);
+    } else {
+      alert('Contraseña incorrecta');
+    }
+  };
 
   useEffect(
     () => {
@@ -42,6 +64,10 @@ function App() {
 
   const [showModal, setShowModal] = useState(false);
 
+  if (showTable) {
+    return <Table />;
+  }
+
   return (
     <body className="App-header">
       <div className="container">
@@ -57,11 +83,18 @@ function App() {
                   </div>
                   <p className="ampersand">&</p>
                 </div>
-                <p className="date">02.02.2024</p>
+                <div className="date" onClick={handleDateClick}>02.02.2024</div>
               </div>
             </div>
           </header>
-
+          <div className='passwordModal1'>
+            {isPasswordModalOpen && (
+              <div className="passwordModal">
+                <input type="password" value={password} onChange={handlePasswordChange} />
+                <button onClick={handlePasswordSubmit}>Confirmar</button>
+              </div>
+            )}  
+          </div>
           <div className="container">
             <div className="primerimg" />
           </div>
